@@ -7,7 +7,7 @@
 
 get_header(); ?>
 
-	<main id="primary" class="content-area" role="main">
+	<main id="primary" class="content-area columns medium-8" role="main">
 
 		<?php if ( have_posts() ) : ?>
 
