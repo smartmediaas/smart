@@ -1,0 +1,16 @@
+/* =Custom Foundation styles
+----------------------------------------------- */
+
+// Import mixins and reset
+@import 'scss/normalize';
+@import 'scss/foundation/functions';
+@import 'mixins';
+
+// Place custom Foundation modifiers here
+$topbar-bg-color: #111;
+
+$topbar-menu-link-color-toggled: #fff;
+$topbar-menu-icon-color-toggled: #333;
+
+// Import Foundation scss
+@import 'scss/foundation';
