@@ -76,6 +76,13 @@ function smart_widgets_init() {
 add_action( 'widgets_init', 'smart_widgets_init' );
 
 /**
+ * Add TinyMCE editor styles
+ */
+function smart_add_editor_styles() {
+    add_editor_style();
+}
+add_action( 'init', 'smart_add_editor_styles' );
+/**
  * Enqueue scripts and styles.
  */
 function smart_scripts() {

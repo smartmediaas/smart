@@ -7,7 +7,8 @@ body#tinymce.wp-editor {
     margin: 10px; 
 }
 
-body#tinymce.wp-editor a {
+body#tinymce.wp-editor p {
     color: #4CA6CF;
+    max-width: 640px;
 }
 */

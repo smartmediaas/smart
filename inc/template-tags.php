@@ -72,14 +72,14 @@ function smart_img($imgName, $imgClass='', $imgWidth='', $imgHeight='', $imgCrop
         $imgReturn = get_bloginfo('stylesheet_directory').'/images/'.$imgName;
     }elseif($imgName == 'thumbnail'){
     	$imgID = get_post_thumbnail_id();
-    	$url = wp_get_attachment_image_src( $imgID );
+    	$url = wp_get_attachment_image_src( $imgID, 'large' );
     	$title = get_post($imgID)->post_title;
     	$imgSrc = matthewruddy_image_resize( $url[0], $imgWidth, $imgHeight, $imgCrop, $imgRetina );
-    	$imgReturn = '<img class="'.$imgClass.'" src="'.$imgSrc.'" alt="'.$title.'" title="'.$title.'" />';
+    	$imgReturn = '<img class="'.$imgClass.'" src="'.$imgSrc['url'].'" alt="'.$title.'" title="'.$title.'" />';
     }elseif($imgWidth){
     	$url = get_bloginfo('stylesheet_directory').'/images/'.$imgName;
     	$imgSrc = matthewruddy_image_resize( $url, $imgWidth, $imgHeight, $imgCrop, $imgRetina );
-    	$imgReturn = '<img src="'.$imgSrc.'" alt="'.$imgName.'" title="'.$imgName.'" />';
+    	$imgReturn = '<img src="'.$imgSrc['url'].'" alt="'.$imgName.'" title="'.$imgName.'" />';
     }elseif($imgClass){
         $imgReturn = '<img class="'.$imgClass.'" src="'.get_bloginfo('stylesheet_directory').'/images/'.$imgName.'" alt="'.$imgName.'" title="'.$imgName.'" />';
     }else{
@@ -165,9 +165,9 @@ if ( ! function_exists( 'smart_posted_on' ) ) :
  */
 function smart_posted_on() {
 	$time_string = '<time class="entry-date published" datetime="%1$s">%2$s</time>';
-	if ( get_the_time( 'U' ) !== get_the_modified_time( 'U' ) ) {
+	/*if ( get_the_time( 'U' ) !== get_the_modified_time( 'U' ) ) {
 		$time_string .= '<time class="updated" datetime="%3$s">%4$s</time>';
-	}
+	}*/
 
 	$time_string = sprintf( $time_string,
 		esc_attr( get_the_date( 'c' ) ),
