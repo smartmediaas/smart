@@ -13,7 +13,7 @@
 	<footer id="colophon" class="site-footer row" role="contentinfo">
 		<div class="site-info columns small-12">
 			<?php do_action( 'smart_credits' ); ?>
-			<?php _e('Built on WordPress by', 'sfu_theme'); ?> <a href="http://smartmedia.no/" title="Smart Media" target="_blank">Smart Media AS</a>
+			<?php _e('Built on WordPress by', 'smart'); ?> <a href="http://smartmedia.no/" title="Smart Media" target="_blank">Smart Media AS</a>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
 </div><!-- #page -->
