@@ -42,7 +42,6 @@
                 main = parseUri('<?php bloginfo("wpurl"); ?>'),
                 replace = src.replace(url.host, main.host);
 
-            console.log(url);
             $(this).attr('src', replace);
 
             var link1 = $('#respond-proxy').attr('href');

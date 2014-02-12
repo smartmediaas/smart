@@ -15,36 +15,36 @@ Custom javascripts that you want to run in the footer can be included in the /js
 
 ####Template tags
 
-#####smart_image($imgName, $imgClass, $imgWidth, $imgHeight, $imgCrop, $imgRetina)
+#####smart_img($imgName, $imgClass, $imgWidth, $imgHeight, $imgCrop, $imgRetina)
 
-$imgName options:
+*$imgName options:
 
 - 'url'
 - 'thumbnail' works in archives and single view
 - 'yourimage.png' gets the image from the theme image folder
 
 
-$imgClass options:
+*$imgClass options:
 
 - appends the given class to the image
 
 
-$imgWidth options:
+*$imgWidth options:
 
 - (numeric) sets image width
 
 
-$imgHeight options: 
+*$imgHeight options: 
 
 - (numeric) sets image height
 
 
-$imgCrop options:
+*$imgCrop options:
 
 - (boolean) hard or soft crop. Default is true (hard-crop)
 
 
-$imgRetina options:
+*$imgRetina options:
 
 - (boolean) better quality image? Default is false.
 
@@ -52,6 +52,3 @@ $imgRetina options:
 #####smart_pagination
 
 kriesi pagination
-
-
-#####
