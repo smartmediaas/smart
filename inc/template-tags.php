@@ -6,7 +6,7 @@
  *
  * @package smart
  */
-if ( ! function_exists( 'sfu_theme_pagination' ) ) :
+if ( ! function_exists( 'smart_pagination' ) ) :
 /**
  * Display navigation to next/previous post when applicable.
  *
