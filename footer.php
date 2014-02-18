@@ -17,7 +17,16 @@
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
 </div><!-- #page -->
-
+<script>
+	jQuery(document).ready(function($){
+		$(document).foundation('topbar', {
+	        custom_back_text: true,
+	        back_text: "<?php _e('Back', 'smart_theme'); ?>",
+	        scrolltop: false,
+	        mobile_show_parent_link: true,
+	    });
+	});
+</script>
 <?php wp_footer(); ?>
 
 </body>

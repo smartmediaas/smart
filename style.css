@@ -76,6 +76,10 @@ and Blueprint http://www.blueprintcss.org/
   top: 0;
 }
 
+.top-bar .toggle-topbar.menu-icon a {
+  padding: 0;
+}
+
 /* =Content
 ----------------------------------------------- */
 /* =Asides

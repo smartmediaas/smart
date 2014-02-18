@@ -94,6 +94,8 @@ function smart_scripts() {
 
 	wp_enqueue_script( 'jquery' );
 
+	wp_enqueue_script( 'foundation-modernizr', get_template_directory_uri() . '/js/vendor/modernizr.js', array('jquery'), false, true);
+
 	wp_enqueue_script( 'foundation-script', get_template_directory_uri() . '/js/foundation.min.js', array('jquery'), false, true);
 	
 	wp_enqueue_script( 'foundation-topbar-script', get_template_directory_uri() . '/js/foundation/foundation.topbar.js', array('jquery', 'foundation-script'), false, true);

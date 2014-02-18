@@ -38,7 +38,7 @@ if (strpos($_SERVER['HTTP_USER_AGENT'], "Windows", 0) !== FALSE) { ?>
             <?php if( has_nav_menu( 'primary' ) ){ ?>
                 <li class="toggle-topbar menu-icon">
                     <a href="#">
-                        <span><?php _e('Menu', 'sfu_theme'); ?></span>
+                        <?php _e('Menu', 'sfu_theme'); ?>
                     </a>
                 </li>
             <?php } ?>
