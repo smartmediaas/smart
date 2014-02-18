@@ -1,8 +1,8 @@
 <?php
 /**
- * The template for displaying search forms in sfu_theme
+ * The template for displaying search forms in smart
  *
- * @package sfu_theme
+ * @package smart
  */
 ?>
 <form role="search" method="get" id="searchform" action="<?php echo home_url('/'); ?>">
