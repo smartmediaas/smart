@@ -1,2 +1,36 @@
 /* =Project mixins
 ----------------------------------------------- */
+// breakpoint mixins
+$small: "only screen and (max-width: 40em)";
+$medium: "only screen and (min-width:40.063em)";
+$medium-only: "only screen and (min-width:40.063em) and (max-width:64.062em)";
+$large: "only screen and (min-width:64.063em)";
+$large-only: "only screen and (min-width:64.063em) and (max-width:90.062em)";
+$xlarge: "only screen and (min-width:90.063em)";
+$xxlarge: "only screen and (min-width:120.063em)";
+
+@mixin breakpoint($media) {
+  @if $media == small {
+    @media #{$small} { @content; }
+  }
+  @else if $media == medium {
+    @media #{$medium} { @content; }
+  }
+  @else if $media == medium-only {
+    @media #{$medium-only} { @content; }
+  }
+  @else if $media == large {
+    @media #{$large} { @content; }
+  }
+  @else if $media == large-only {
+    @media #{$large-only} { @content; }
+  }
+  @else if $media == xlarge {
+    @media #{$xlarge} { @content; }
+  }
+  @else if $media == xxlarge {
+    @media #{$xxlarge} { @content; }
+  }
+}
+
+//usage: @include breakpoint(small) {  css here }
