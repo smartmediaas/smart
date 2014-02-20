@@ -5,7 +5,7 @@
  * @package smart
  */
 ?>
-	<div id="secondary" class="widget-area columns medium-4" role="complementary">
+	<div id="secondary" <?php smart_layout('secondary'); ?> role="complementary">
 		<?php do_action( 'before_sidebar' ); ?>
 		<?php if ( ! dynamic_sidebar( 'sidebar-1' ) ) : ?>
 

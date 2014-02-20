@@ -8,6 +8,20 @@
  */
 
 /**
+ * Apply classes to #main and #secondary
+ *
+ * @param string $placement = main for #main or anything else for #secondary. string $add_classes additional classes
+ * @return string
+ */
+function smart_layout( $placement = 'main', $add_classes = '' ){
+	if($placement == 'main'){
+		$classes = ' class="content-area columns medium-8 ' . $add_classes . '"';
+	} else {
+		$classes = ' class="widget-area columns medium-4 ' . $add_classes . '"';
+	}
+	echo $classes;
+}
+/**
  * Get our wp_nav_menu() fallback, wp_page_menu(), to show a home link.
  *
  * @param array $args Configuration arguments.

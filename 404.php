@@ -7,7 +7,7 @@
 
 get_header(); ?>
 
-	<main id="primary" class="content-area" role="main">
+	<main id="primary" <?php smart_layout(); ?> role="main">
 
 		<section class="error-404 not-found">
 			<header class="page-header">
@@ -19,7 +19,7 @@ get_header(); ?>
 
 				<?php get_search_form(); ?>
 
-				<?php the_widget( 'WP_Widget_Recent_Posts' ); ?>
+				<?php /* the_widget( 'WP_Widget_Recent_Posts' ); ?>
 
 				<?php if ( smart_categorized_blog() ) : // Only show the widget if site has multiple categories. ?>
 				<div class="widget widget_categories">
@@ -39,16 +39,15 @@ get_header(); ?>
 				<?php endif; ?>
 
 				<?php
-				/* translators: %1$s: smiley */
 				$archive_content = '<p>' . sprintf( __( 'Try looking in the monthly archives. %1$s', 'smart' ), convert_smilies( ':)' ) ) . '</p>';
 				the_widget( 'WP_Widget_Archives', 'dropdown=1', "after_title=</h2>$archive_content" );
 				?>
 
-				<?php the_widget( 'WP_Widget_Tag_Cloud' ); ?>
+				<?php the_widget( 'WP_Widget_Tag_Cloud' ); */ ?>
 
 			</div><!-- .page-content -->
 		</section><!-- .error-404 -->
 
 	</main><!-- #primary -->
-
+<?php get_sidebar(); ?>
 <?php get_footer(); ?>

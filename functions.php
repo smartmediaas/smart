@@ -134,6 +134,11 @@ require_once get_template_directory() . '/inc/template-tags.php';
 require_once get_template_directory() . '/inc/extras.php';
 
 /**
+ * Load Types and Fields.
+ */
+require_once get_template_directory() . '/inc/types-and-fields.php';
+
+/**
  * Customizer additions.
  */
 require_once get_template_directory() . '/inc/customizer.php';

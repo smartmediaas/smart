@@ -9,7 +9,7 @@
 
 get_header(); ?>
 
-	<main id="primary" class="content-area columns medium-8" role="main">
+	<main id="primary" <?php smart_layout(); ?> role="main">
 
 		<?php if ( have_posts() ) : ?>
 
