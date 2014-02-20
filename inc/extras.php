@@ -14,13 +14,16 @@
  * @return string
  */
 function smart_layout( $placement = 'main', $add_classes = '' ){
-	if($placement == 'main'){
-		$classes = ' class="content-area columns medium-8 ' . $add_classes . '"';
-	} else {
-		$classes = ' class="widget-area columns medium-4 ' . $add_classes . '"';
+	if( $placement == 'main' ){
+		$classes = ' class="content-area columns medium-8 medium-push-4 ' . $add_classes . '"';
+	} elseif( $placement == 'fullwidth' ){
+		$classes = ' class="content-area columns medium-12 ' . $add_classes . '"';
+	}else {
+		$classes = ' class="widget-area columns medium-4 medium-pull-8 ' . $add_classes . '"';
 	}
 	echo $classes;
 }
+
 /**
  * Get our wp_nav_menu() fallback, wp_page_menu(), to show a home link.
  *
